@@ -9,7 +9,11 @@ html {
 }
 
 .header {
+<<<<<<< HEAD
     position: fixed;
+=======
+    /* position: fixed; */
+>>>>>>> 7d9d17bb904d5abaa5eb3426738239a288e194d1
     left: 0;
     right: 0;
     display: flex;
@@ -183,10 +187,14 @@ input:hover {
     height: 1rem;
 }
 
+<<<<<<< HEAD
 /* meio */
 .bloco-imagens-texto {
     position: relative;
     top: 150px;
+=======
+.bloco-imagens-texto {
+>>>>>>> 7d9d17bb904d5abaa5eb3426738239a288e194d1
     background-color: #f9e8cc3f;
 }
 
@@ -194,7 +202,11 @@ input:hover {
     /* width: 100%; */
     display: inline-block;
     content: "";
+<<<<<<< HEAD
     height: 200px;
+=======
+    height: 70px;
+>>>>>>> 7d9d17bb904d5abaa5eb3426738239a288e194d1
 }
 
 .meio {
@@ -228,6 +240,7 @@ input:hover {
 }
 
 .img-topo-site {
+<<<<<<< HEAD
     position: relative;
     bottom: 400px;
     float: right;
@@ -376,4 +389,8 @@ input:hover {
 
 .cart-button .cart-icon {
     width: 1rem;
+=======
+    float: right;
+    /* margin-left: 5px; */
+>>>>>>> 7d9d17bb904d5abaa5eb3426738239a288e194d1
 }
