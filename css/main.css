@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -42,7 +44,7 @@ html {
     display: flex;
     list-style: none;
     padding: 1px;
-    margin-left: 35rem;
+    margin-left: 30rem;
     font-size: 18px;
     font-weight: 300;
     font-style: normal;
@@ -224,6 +226,7 @@ input:hover {
 
 .meio button:hover {
     background-color: #111;
+    box-shadow: 0px 0px 8px #111;
     transform: scale(1.02);
 }
 
@@ -234,146 +237,207 @@ input:hover {
     left: -300px;
 }
 
-/* Estilo de Mulheres */
-.card {
-    --bg-card: #27272a;
-    --primary: #6d28d9;
-    --primary-800: #4c1d95;
-    --primary-shadow: #2e1065;
-    --light: #d9d9d9;
-    --zinc-800: #18181b;
-    --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+/* Estilo de Produtos */
 
-    position: relative;
+/* ESTILO DO CONTATO */
+.Contato {
+    padding: 0rem 10rem 0 10rem;
+}
 
+.Contato h1 {
+    align-items: center;
+    text-align: center;
+    color: #000;
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+.container-form {
     display: flex;
-    flex-direction: column;
-    margin-left: 180px;
-    gap: 0.75rem;
-
-    padding: 1rem;
-    width: 14rem;
-    background-color: var(--bg-card);
-
-    border-radius: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
-.image_container {
-    overflow: hidden;
-    cursor: pointer;
+form {
+    background-color: #f9e8cc;
+    padding: 2rem;
+    width: 50rem;
+    height: auto;
+}
 
-    position: relative;
-    z-index: 5;
+form h3 {
+    text-align: center;
+    color: #000;
+    font-size: 2rem;
+}
 
+.Contato .container-form .map {
     width: 100%;
-    height: 8rem;
-    background-color: var(--primary-800);
-
-    border-radius: 0.5rem;
+    flex: 1.45rem;
+    object-fit: cover;
 }
 
-.image_container .image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 3rem;
-    fill: var(--light);
-}
-
-.title {
-    overflow: clip;
-
-    width: 100%;
-
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--light);
-    text-transform: capitalize;
-    text-wrap: nowrap;
-    text-overflow: ellipsis;
-}
-
-.size {
-    font-size: 0.75rem;
-    color: var(--light);
-}
-
-.list-size {
+.inputform {
     display: flex;
     align-items: center;
-    margin-left: -30px;
-    gap: 0.25rem;
+    padding: 0 0 0 1rem;
+    margin-top: 1rem;
 
-    margin-top: 0.25rem;
 }
 
-.list-size .item-list {
+.inputform input {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.inputform span {
+    margin-right:10px;
+    font-size: 1.5rem;
+}
+
+form .button-enviar {
+    margin-top: 2rem;
+    margin-left: 2.4rem;
+    border-radius: 15px;
+    background-color: #86bbd8;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    color: #000;
+}
+
+form .button-enviar:hover {
+    box-shadow: 0px 0px 8px #000;
+    transform: scale(1.02);
+}
+
+/* ESTILO DO FOOTER */
+
+footer {
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    width: 100%;
+    /* color: #aa7448; */
+}
+
+#footer-content {
+    background-color: #aa7448;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer-contacts h1{
+    margin-bottom: 0.75rem;
+}
+
+#footer-social-media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer-social-media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.4s;
+}
+
+#footer-social-media .footer-link i {
+    font-size: 1.25rem;
+}
+
+#footer-social-media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#Twitter {
+    background-color: #00acee;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
     list-style: none;
 }
 
-.list-size .item-list-button {
-    cursor: pointer;
-
-    padding: 0.5rem;
-    background-color: var(--zinc-800);
-
-    font-size: 0.75rem;
-    color: var(--light);
-
-    border: 2px solid var(--zinc-800);
-    border-radius: 0.25rem;
-
-    transition: all 0.3s ease-in-out;
+.footer-list .footer-link {
+    text-decoration: none;
+    color: #262626;
+    transition: all 0.4s;
 }
 
-.item-list-button:hover {
-    border: 2px solid var(--light);
+.footer-list .footer-link:hover {
+    color: #86bbd8;
 }
 
-.item-list-button:focus {
-    background-color: var(--primary);
-
-    border: 2px solid var(--primary-shadow);
-
-    box-shadow: inset 0px 1px 4px var(--primary-shadow);
+#footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.action {
+#footer-subscribe p {
+    color: #262626;
+}
+
+#input-group {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    background-color: #262626;
+    border-radius: 4px;
 }
 
-.price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--light);
+#input-group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+    color: #fff;
 }
 
-.cart-button {
+#input-group button {
+    background-color: #86bbd8;
+    border: none;
+    color: #fff;
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
     cursor: pointer;
+    transition: all 0.4s;
+}
 
+#input-group button:hover {
+    opacity: 0.8;
+}
+
+#footer-copyright {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 0.25rem;
-
-    padding: 0.5rem;
-    width: 100%;
-    background-image: var(--bg-linear);
-
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--light);
-    text-wrap: nowrap;
-
-    border: 2px solid hsla(262, 83%, 58%, 0.5);
-    border-radius: 0.5rem;
-    box-shadow: inset 0 0 0.25rem 1px var(--light);
-}
-
-.cart-button .cart-icon {
-    width: 1rem;
+    background-color: #f9e8cc;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
 }
