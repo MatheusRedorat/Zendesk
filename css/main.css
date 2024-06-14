@@ -237,88 +237,128 @@ input:hover {
     left: -300px;
 }
 
-/* ESTILO DO CARD */
-
-body {
-    margin: 0;
-    background-color: #e5e5e5;
-}
-
-main {
-    width: min(1200px, 90vw);
-    margin: auto;
-}
-
-.slider {
-    width: 100%;
-    height: var(--height);
-    overflow: hidden;
-    mask-image: linear-gradient(to right,
-            transparent,
-            #000 10% 90%,
-            transparent);
-}
-
-.slider .list {
-    display: flex;
-    width: 100%;
-    min-width: calc(var(--width) * var(--quantity));
-    position: relative;
-}
-
-.slider .list .item {
-    width: var(--width);
-    height: var(--height);
-    position: absolute;
-    left: 100%;
-    animation: autoRun 10s linear infinite;
-    transition: filter 0.5s;
-    animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1)) !important;
-}
-
-.slider .list .item img {
-    width: 100%;
-}
-
-@keyframes autoRun {
-    from {
-        left: 100%;
-    }
-
-    to {
-        left: calc(var(--width) * -1);
-    }
-}
-
-.slider:hover .item {
-    animation-play-state: paused !important;
-    filter: grayscale(1);
-}
-
-.slider .item:hover {
-    filter: grayscale(0);
-}
-
-.slider[reverse="true"] .item {
-    animation: reversePlay 10s linear infinite;
-}
-
-@keyframes reversePlay {
-    from {
-        left: calc(var(--width) * -1);
-    }
-
-    to {
-        left: 100%;
-    }
-}
-
 /* Estilo de Produtos */
-/* FIM */
+.Produtos {
+    display: flex;
+    flex-direction: column; /* Adicionado para organizar os itens em coluna */
+    justify-content: center;
+    align-items: center;
+    height: 35rem;
+    background-color: #eee;
+}
+
+.Produtos h1 {
+    text-align: center;
+    color: #000;
+    font-size: 3rem;
+    margin-top: 0; /* Removido para alinhar o h1 no topo */
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Adicionado para permitir que os cards se alinhem lado a lado */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 10px; /* Espaçamento entre os cards */
+}
+
+.cards{
+    position: relative;
+    width: 280px;
+    height: 420px;
+    background: #aa7448;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.cards:before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #f9e8cc;
+    transform: skewY(345deg);
+    transition: 0.5s;  
+}
+.cards:hover::before{
+    transform: skewY(390deg);
+    top: -70%;
+}
+.cards::after{
+    content: 'CAMISA';
+    position: absolute;
+    margin: 3px;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 4.3em;
+    color: rgba(0, 0, 0, 0.1);
+}
+.cards .imgBx{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.cards .imgBx img{
+    max-width: 80%;
+    transition: 0.5s;
+}
+.cards:hover .imgBx img{
+    max-width: 70%;
+}
+.cards .contentBx{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index:1;
+
+}
+.cards .contentBx h3{
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.cards .contentBx .price{
+    font-size: 24px;
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.cards .contentBx .buy{
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #fff;
+    text-decoration: none;
+    background: #86bbd8;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.cards:hover .contentBx .buy{
+    top: 0px;
+    opacity: 1;
+}
 
 /* ESTILO DO CONTATO */
 .Contato {
     padding: 0rem 10rem 0 10rem;
+    background-color: #f9e8cc;
+    height: 600px;
 }
 
 .Contato h1 {
