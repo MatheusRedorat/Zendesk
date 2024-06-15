@@ -10,6 +10,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* MENU */
 .header {
     position: fixed;
     left: 0;
@@ -187,7 +188,7 @@ input:hover {
 .bloco-imagens-texto {
     position: relative;
     top: 150px;
-    background-color: #f9e8cc3f;
+    background-color: #f9e8ccb8;
 }
 
 .bloco-imagens-texto::after {
@@ -234,31 +235,46 @@ input:hover {
     float: right;
     left: -300px;
 }
+/* ESTILO DE SOBRE */
+.Sobre {
+    display: flex;
+    align-items: center;
+    padding: 80px 4%;
+    margin: 15rem;
+}
+
+
 
 /* Estilo de Produtos */
 .Produtos {
     display: flex;
-    flex-direction: column; /* Adicionado para organizar os itens em coluna */
+    box-shadow: 0 0 40px 10px #000000b0;
+    flex-direction: column;
+    /* Adicionado para organizar os itens em coluna */
     justify-content: center;
     align-items: center;
-    height: 35rem;
+    height: 40rem;
 }
 
 .Produtos h1 {
     text-align: center;
     color: #000;
     font-size: 3rem;
-    margin-top: 0; /* Removido para alinhar o h1 no topo */
+    margin-top: -45px;
+    margin-bottom: 55px;
 }
 
 .cards-container {
     display: flex;
-    flex-wrap: wrap; /* Adicionado para permitir que os cards se alinhem lado a lado */
-    justify-content: center; /* Centraliza os cards horizontalmente */
-    gap: 10px; /* Espaçamento entre os cards */
+    flex-wrap: wrap;
+    /* Adicionado para permitir que os cards se alinhem lado a lado */
+    justify-content: center;
+    /* Centraliza os cards horizontalmente */
+    gap: 10px;
+    /* Espaçamento entre os cards */
 }
 
-.cards{
+.cards {
     position: relative;
     width: 280px;
     height: 420px;
@@ -268,7 +284,7 @@ input:hover {
     margin: 10px;
 }
 
-.cards:before{
+.cards:before {
     content: '';
     position: absolute;
     top: -50%;
@@ -276,13 +292,15 @@ input:hover {
     height: 100%;
     background: #f9e8cc;
     transform: skewY(345deg);
-    transition: 0.5s;  
+    transition: 0.5s;
 }
-.cards:hover::before{
+
+.cards:hover::before {
     transform: skewY(390deg);
     top: -70%;
 }
-.cards::after{
+
+.cards::after {
     content: 'CAMISA';
     position: absolute;
     margin: 3px;
@@ -292,7 +310,8 @@ input:hover {
     font-size: 4.3em;
     color: rgba(0, 0, 0, 0.1);
 }
-.cards .imgBx{
+
+.cards .imgBx {
     position: relative;
     width: 100%;
     display: flex;
@@ -302,37 +321,42 @@ input:hover {
     z-index: 1;
 }
 
-.cards .imgBx img{
+.cards .imgBx img {
     max-width: 80%;
     transition: 0.5s;
 }
-.cards:hover .imgBx img{
+
+.cards:hover .imgBx img {
     max-width: 70%;
 }
-.cards .contentBx{
+
+.cards .contentBx {
     position: relative;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index:1;
+    z-index: 1;
 
 }
-.cards .contentBx h3{
+
+.cards .contentBx h3 {
     font-size: 18px;
     color: #000;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-.cards .contentBx .price{
+
+.cards .contentBx .price {
     font-size: 24px;
     color: #000;
     font-weight: 500;
     letter-spacing: 1px;
 }
-.cards .contentBx .buy{
+
+.cards .contentBx .buy {
     position: relative;
     top: 200px;
     opacity: 0;
@@ -346,9 +370,167 @@ input:hover {
     letter-spacing: 1px;
     transition: 0.5s;
 }
-.cards:hover .contentBx .buy{
+
+.cards:hover .contentBx .buy {
     top: 0px;
     opacity: 1;
+}
+
+/* ESTILO DE ACESSORIOS */
+
+
+
+
+
+
+
+
+/* ESTILO DE AVALIAÇÃO */
+.Avaliação {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: -100px;
+    background-color: #f9e8cc;
+}
+
+.Avaliação h1 {
+    color: #000;
+    font-size: 3rem;
+    margin-top: -200px;
+    margin-bottom: 35px;
+}
+
+.slide-container {
+    max-width: 1820px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #FFF;
+}
+
+.image-content,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #aa7448;
+    border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+}
+
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #aa7448;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.description {
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+}
+
+.reviews {
+    color: gold
+}
+
+.swiper-navBtn {
+    color: #6E93f7;
+    transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+    color: #4070F4;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 35px;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: #6E93f7;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+
+    .swiper-navBtn {
+        display: none;
+    }
 }
 
 /* ESTILO DO CONTATO */
