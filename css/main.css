@@ -188,14 +188,14 @@ input:hover {
 .bloco-imagens-texto {
     position: relative;
     top: 150px;
-    background-color: #f9e8ccb8;
+    background-color: #f9e8cc73;
 }
 
 .bloco-imagens-texto::after {
     /* width: 100%; */
     display: inline-block;
     content: "";
-    height: 200px;
+    height: 500px;
 }
 
 .meio {
@@ -239,10 +239,25 @@ input:hover {
 .Sobre {
     display: flex;
     align-items: center;
-    padding: 80px 4%;
-    margin: 15rem;
+    padding: 40px;
+    gap: 60px;
+    background-color: #f9e8cc;
+    width: 100%;
 }
 
+.texto-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 50px;
+    text-align:center;
+}
+
+.texto-sobre p {
+    text-align: justify;
+    font-weight: 500;
+    margin: 20px 0 ;
+    width: 70rem;
+}
 
 
 /* Estilo de Produtos */
@@ -254,6 +269,7 @@ input:hover {
     justify-content: center;
     align-items: center;
     height: 40rem;
+    margin-top: 25rem;
 }
 
 .Produtos h1 {
