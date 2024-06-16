@@ -192,7 +192,6 @@ input:hover {
 }
 
 .bloco-imagens-texto::after {
-    /* width: 100%; */
     display: inline-block;
     content: "";
     height: 500px;
@@ -235,6 +234,7 @@ input:hover {
     float: right;
     left: -300px;
 }
+
 /* ESTILO DE SOBRE */
 .Sobre {
     display: flex;
@@ -249,27 +249,164 @@ input:hover {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 50px;
-    text-align:center;
+    text-align: center;
 }
 
 .texto-sobre p {
     text-align: justify;
     font-weight: 500;
-    margin: 20px 0 ;
+    margin: 20px 0;
     width: 70rem;
 }
 
 
-/* Estilo de Produtos */
-.Produtos {
+/* ESTILO DE NOVIDADE */
+.Novidade {
     display: flex;
     box-shadow: 0 0 40px 10px #000000b0;
     flex-direction: column;
     /* Adicionado para organizar os itens em coluna */
+    border-radius: 25px;
     justify-content: center;
     align-items: center;
     height: 40rem;
-    margin-top: 25rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+}
+
+.Novidade h1 {
+    text-align: center;
+    color: #000;
+    font-size: 3rem;
+    margin-top: -45px;
+    margin-bottom: 55px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Adicionado para permitir que os cards se alinhem lado a lado */
+    justify-content: center;
+    /* Centraliza os cards horizontalmente */
+    gap: 10px;
+    /* Espaçamento entre os cards */
+}
+
+.cards {
+    position: relative;
+    width: 280px;
+    height: 420px;
+    background: #aa7448;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.cards:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #f9e8cc;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+.cards:hover::before {
+    transform: skewY(390deg);
+    top: -70%;
+}
+
+.cards::after {
+    content: 'CAMISA';
+    position: absolute;
+    margin: 3px;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 4.3em;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.cards .imgBx {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.cards .imgBx img {
+    max-width: 80%;
+    transition: 0.5s;
+}
+
+.cards:hover .imgBx img {
+    max-width: 70%;
+}
+
+.cards .contentBx {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+
+}
+
+.cards .contentBx h3 {
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cards .contentBx .price {
+    font-size: 24px;
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.cards .contentBx .buy {
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #fff;
+    text-decoration: none;
+    background: #86bbd8;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.cards:hover .contentBx .buy {
+    top: 0px;
+    opacity: 1;
+}
+
+/* Estilo de Produtos */
+.Produtos {
+    display: flex;
+    /* box-shadow: 0 0 40px 10px #000000b0; */
+    flex-direction: column;
+    /* Adicionado para organizar os itens em coluna */
+    border-radius: 25px;
+    background-color: #c0bcb9a9;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
 }
 
 .Produtos h1 {
@@ -391,14 +528,6 @@ input:hover {
     top: 0px;
     opacity: 1;
 }
-
-/* ESTILO DE ACESSORIOS */
-
-
-
-
-
-
 
 
 /* ESTILO DE AVALIAÇÃO */
